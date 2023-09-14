@@ -1,0 +1,8 @@
+script.Parent.MouseButton1Click:connect(function()
+      script.Parent.Parent.Tab1Frame.Visible = false
+      script.Parent.Parent.Tab2Frame.Visible = false
+      script.Parent.Parent.Tab3Frame.Visible = false
+     wait(0.1)
+end)
+
+--adjust false and true
