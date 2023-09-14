@@ -1,0 +1,31 @@
+local TextLabel = script.Parent --Sets The Variable
+local Text
+
+function SoundEffect()
+	local Sound = Instance.new("Sound", workspace)
+	Sound.Name = "TextSound"
+	Sound.SoundId = "http://www.roblox.com/asset/?id=421058925" --Remove The Elipsis And Put The Sound URL.
+	Sound.PlaybackSpeed = 1
+	Sound.Volume = 1
+	Sound:Play()
+	coroutine.resume(coroutine.create(function()
+		wait(1)
+		Sound:Destroy()
+	end))
+end
+
+function setText(word)
+	Text = word
+	for i = 1, #Text do
+		TextLabel.Text = string.sub(Text, 1, i) 
+		SoundEffect()
+		TextLabel.TextColor3 = Color3.fromRGB(255,255,255)--The Numbers Are The Colour.Change The Numbers To Change The Colour.
+		wait(0.04)
+	end
+end
+
+setText("Unloading FPS Pack...")
+wait(0.5)
+setText("FPS Loaded")
+wait(0.5)
+TextLabel.Visible = false
