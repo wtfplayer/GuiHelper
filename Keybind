@@ -1,0 +1,14 @@
+local UIS = game:GetService('UserInputService')
+local Frame = script.Parent
+
+-- Functions
+UIS.InputBegan:Connect(function(input, isTyping)
+    if isTyping then return end
+    if input.KeyCode == Enum.KeyCode.E then
+        if Frame.Visible == false then
+            Frame.Visible = true
+        else 
+            Frame.Visible = false
+        end
+    end
+end)
