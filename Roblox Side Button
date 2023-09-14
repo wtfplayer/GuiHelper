@@ -1,0 +1,53 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local ImageButton = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
+local DropShadowHolder = Instance.new("Frame")
+local DropShadow = Instance.new("ImageLabel")
+
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.0579999983, 0, 0, -33)
+Frame.Size = UDim2.new(0, 32, 0, 32)
+
+ImageButton.Parent = Frame
+ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BackgroundTransparency = 1.000
+ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Size = UDim2.new(0, 32, 0, 32)
+ImageButton.Image = "rbxassetid://2022095896"
+
+
+UICorner.Parent = ImageButton
+
+UICorner_2.Parent = Frame
+
+DropShadowHolder.Name = "DropShadowHolder"
+DropShadowHolder.Parent = Frame
+DropShadowHolder.BackgroundTransparency = 1.000
+DropShadowHolder.BorderSizePixel = 0
+DropShadowHolder.Size = UDim2.new(1, 0, 1, 0)
+DropShadowHolder.ZIndex = 0
+
+DropShadow.Name = "DropShadow"
+DropShadow.Parent = DropShadowHolder
+DropShadow.AnchorPoint = Vector2.new(0.5, 0.5)
+DropShadow.BackgroundTransparency = 1.000
+DropShadow.BorderSizePixel = 0
+DropShadow.Position = UDim2.new(0.5, 0, 0.5, 0)
+DropShadow.Size = UDim2.new(1, 47, 1, 47)
+DropShadow.ZIndex = 0
+DropShadow.Image = "rbxassetid://6014261993"
+DropShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
+DropShadow.ImageTransparency = 1.000
+DropShadow.ScaleType = Enum.ScaleType.Slice
+DropShadow.SliceCenter = Rect.new(49, 49, 450, 450)
