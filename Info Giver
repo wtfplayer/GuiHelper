@@ -1,0 +1,13 @@
+local frame = script.Parent
+
+local player = game.Players.LocalPlayer
+
+local userId = player.UserId
+local thumbType = Enum.ThumbnailType.AvatarBust
+local thumbSize = Enum.ThumbnailSize.Size420x420
+local content, isReady = game.Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+
+
+frame.PlayerImage.Image = content
+frame.PlayerName.Text = player.Name
+frame.PlayerID.Text = player.UserId
