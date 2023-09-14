@@ -1,0 +1,5 @@
+local h = Instance.new("Hint")
+h.Parent = Workspace 
+h.Text = "Hint Here"
+wait(5)
+h:Remove()
